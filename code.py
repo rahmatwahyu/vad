@@ -140,7 +140,7 @@ def object_detection():
 	# update the FPS counter
 	fps.update()
 
-    if data == [] : 
+    if data == []:
         return 0
     else :
          return 1
