@@ -136,14 +136,8 @@ def object_detection():
 	cv2.imshow("Frame", frame)
 	key = cv2.waitKey(1) & 0xFF
 
-
 	# update the FPS counter
 	fps.update()
-
-    if data == []:
-        return 0
-    else :
-         return 1
 
     # stop the timer and display FPS information
 
@@ -161,9 +155,8 @@ try:
         input()
         sound(2)
         print("OKAY")
-        a = object_detection()
-        if a :
-            distance()
+        object_detection()
+        distance()
                                                          
 except KeyboardInterrupt:
     print("\nDone")
