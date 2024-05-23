@@ -204,7 +204,7 @@ try:
         print("#" * 80)
 
         rec = KaldiRecognizer(model, args.samplerate)
-        temp = 1
+        temp = 3
         while True:
             data = q.get()
             if rec.AcceptWaveform(data):
@@ -213,7 +213,7 @@ try:
             else:
                 speak = rec.PartialResult()[17:]
                 print(speak)
-                if (speak=='okay"\n}' and temp):
+                if (speak=='okay"\n}' and temp==3):
                     os.system("amixer set Capture nocap")
                     sound(2)
                     print("OKAY")
@@ -223,7 +223,8 @@ try:
                     os.system("amixer set Capture cap")
                     
                 else :
-                    temp = 1
+                    temp = temp + 1
+                    if temp>=3 : temp=3
                     
                                    
                 
