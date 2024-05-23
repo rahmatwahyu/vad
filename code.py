@@ -140,6 +140,11 @@ def object_detection():
 	# update the FPS counter
 	fps.update()
 
+    if data == [] : 
+        return 0
+    else :
+         return 1
+
     # stop the timer and display FPS information
 
 def int_or_str(text):
@@ -156,8 +161,9 @@ try:
         input()
         sound(2)
         print("OKAY")
-        object_detection()
-        distance()
+        a = object_detection()
+        if a :
+            distance()
                                                          
 except KeyboardInterrupt:
     print("\nDone")
