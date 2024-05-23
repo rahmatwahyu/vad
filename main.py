@@ -216,7 +216,7 @@ try:
                 if (speak=='okay"\n}' and temp):
                     os.system("amixer set Capture nocap")
                     sound(2)
-                    print("MANTAAAAP")
+                    print("OKAY")
                     object_detection()
                     distance()
                     temp = 0
